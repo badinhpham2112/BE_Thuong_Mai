@@ -1,7 +1,5 @@
 const Order = require('../modals/OderProduct');
 const Product = require("../modals/ProductModel");
-const EmailService = require('./EmailService');
-
 
 const createOrder = (newOrder) => {
     return new Promise(async(resolve, reject) => {
