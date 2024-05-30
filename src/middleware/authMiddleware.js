@@ -11,8 +11,8 @@ const authMiddleware = (req, res, next) => {
                 status: 'ERROR'
             })
         }
-        
-        if (user?.isAdmin) {
+
+        if (user?.isAdmin){
             next()
         } else {
             return res.status(404).json({
@@ -34,7 +34,7 @@ const authUserMiddleware = (req, res, next) => {
                 status: 'ERROR'
             })
         }
-       
+
         if (user?.isAdmin || user?.id === userId) {
             next()
         } else {
